@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact – Faddy Insight Mortgages</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+    nav { background-color: #004080; padding: 1rem; }
+    nav a { color: #fff; margin-right: 1rem; text-decoration: none; font-weight: bold; }
+    .container { max-width: 600px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { color: #004080; margin-bottom: 0.5rem; }
+    .email-link { font-size: 1rem; color: #004080; }
+    footer { background-color: #f2f2f2; padding: 1rem; text-align: center; font-size: 0.9rem; }
+    footer a { color: #004080; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h1>Contact Me</h1>
+    <p>If you’d like to get in touch regarding mortgage or credit advice, please email me at:</p>
+    <p class="email-link" id="email-link">
+      <!-- The JavaScript below will populate this with your address -->
+    </p>
+    <p>Please allow up to 24 hours for a response. By sending your details, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Faddy Insight Mortgages. All rights reserved.</p>
+    <p><a href="privacy.html">Privacy Policy</a> | <a href="disclaimer.html">Disclaimer</a></p>
+  </footer>
+
+  <script>
+    (function() {
+      var user   = "fm";
+      var domain = "faddyinsight.com";
+      var subject = encodeURIComponent("Mortgage or Credit Enquiry");
+      var linkHTML = "<a href=\"mailto:" + user + "@" + domain + "?subject=" + subject + "\">" + user + "@" + domain + "</a>";
+      document.getElementById("email-link").innerHTML = linkHTML;
+    })();
+  </script>
+
+</body>
+</html>
